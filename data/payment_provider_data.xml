@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Generic payment method representing the Finivex hosted checkout. The
+         specific rail (EcoCash, card, …) is chosen by the shopper on the
+         hosted page, so a single umbrella method is sufficient here. -->
+    <record id="payment_method_finivex" model="payment.method">
+        <field name="name">Finivex</field>
+        <field name="code">finivex</field>
+        <field name="sequence">90</field>
+        <field name="image" type="base64" file="payment_finivex/static/description/icon.png"/>
+    </record>
+
+    <record id="payment_provider_finivex" model="payment.provider">
+        <field name="name">Finivex</field>
+        <field name="code">finivex</field>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+        <field name="payment_method_ids" eval="[(4, ref('payment_method_finivex'))]"/>
+        <field name="image_128" type="base64" file="payment_finivex/static/description/icon.png"/>
+        <field name="state">disabled</field>
+        <field name="is_published" eval="False"/>
+        <field name="finivex_expires_in_minutes">30</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

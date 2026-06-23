@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_form" model="ir.ui.view">
+        <field name="name">Finivex Provider Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position="inside">
+                <group invisible="code != 'finivex'">
+                    <field name="finivex_api_key"
+                           required="code == 'finivex' and state != 'disabled'"
+                           password="True"/>
+                    <field name="finivex_api_secret"
+                           required="code == 'finivex' and state != 'disabled'"
+                           password="True"/>
+                    <field name="finivex_webhook_secret"
+                           required="code == 'finivex' and state != 'disabled'"
+                           password="True"/>
+                    <field name="finivex_base_url"
+                           placeholder="https://gateway.finivex.online/api/pg"/>
+                    <field name="finivex_payment_method_lock"/>
+                    <field name="finivex_expires_in_minutes"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

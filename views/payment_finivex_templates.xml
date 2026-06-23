@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Redirect form. Auto-submitted by the payment form JS; sends the
+        customer to the Finivex hosted checkout page. The query string of the
+        gateway-issued redirect URL is re-appended as hidden inputs so a GET
+        submit preserves the ``reference`` parameter.
+    -->
+    <template id="redirect_form">
+        <form t-att-action="api_url" method="get">
+            <t t-foreach="url_params or {}" t-as="param" t-key="param">
+                <input type="hidden" t-att-name="param" t-att-value="url_params[param]"/>
+            </t>
+        </form>
+    </template>
+</odoo>
