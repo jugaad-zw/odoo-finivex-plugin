@@ -3,16 +3,24 @@
     'name': "Finivex Payment Gateway",
     'version': '17.0.1.0.0',
     'category': 'Accounting/Payment Providers',
-    'summary': "Accept EcoCash, OneMoney, Omari, InnBucks, ZimSwitch and card "
-               "payments through the Finivex hosted checkout.",
+    'summary': "Accept every payment in Zimbabwe — EcoCash, OneMoney, Visa, "
+               "Mastercard, ZIPIT, InnBucks and more. One integration, all "
+               "payment methods.",
     'description': """
-Finivex Payment Gateway
-======================
+Accept every payment in Zimbabwe
+================================
 
-Adds Finivex as a redirect-based payment provider in Odoo. Customers are sent to
-the Finivex hosted checkout page to pay with EcoCash, OneMoney, Omari, InnBucks,
-ZimSwitch POS, Visa/Mastercard (MPGS) and more. The order is confirmed from a
-signed webhook and re-verified against the status API before fulfilment.
+EcoCash, OneMoney, Visa, Mastercard, ZIPIT, InnBucks and more. One integration,
+all payment methods. Start collecting payments in minutes.
+
+Start collecting payments and track everything in real-time.
+
+Pay as you go
+-------------
+* All payment methods included
+* No setup or monthly fees
+* Merchant portal access
+* Webhook notifications
 
 Supported currencies: USD, ZWG.
     """,
