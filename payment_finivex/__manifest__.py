@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Finivex Payment Gateway",
-    'version': '17.0.1.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Accounting/Payment Providers',
     'summary': "Accept every payment in Zimbabwe — EcoCash, OneMoney, Visa, "
                "Mastercard, ZIPIT, InnBucks and more. One integration, all "

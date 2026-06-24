@@ -157,6 +157,18 @@ class PaymentProvider(models.Model):
 
     # === Framework overrides ================================================
 
+    def _compute_feature_support_fields(self):
+        """Enable refund support for Finivex providers.
+
+        The refund flow (``_send_refund_request``) is gated by this feature
+        flag; without it the framework never surfaces the refund action.
+        Finivex supports partial refunds, so ``'partial'`` is declared.
+        """
+        super()._compute_feature_support_fields()
+        self.filtered(lambda p: p.code == 'finivex').update({
+            'support_refund': 'partial',
+        })
+
     def _get_supported_currencies(self):
         """Restrict Finivex to the currencies it can actually settle."""
         supported_currencies = super()._get_supported_currencies()

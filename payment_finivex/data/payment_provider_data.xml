@@ -7,6 +7,7 @@
         <field name="name">Finivex</field>
         <field name="code">finivex</field>
         <field name="sequence">90</field>
+        <field name="support_refund">partial</field>
         <field name="image" type="base64" file="payment_finivex/static/description/icon.png"/>
     </record>
 

@@ -15,7 +15,7 @@ in real-time.
 
 ---
 
-Adds **Finivex** as a redirect-based payment provider for Odoo 17. Customers are
+Adds **Finivex** as a redirect-based payment provider for Odoo 18. Customers are
 sent to the Finivex hosted checkout to pay with EcoCash, OneMoney, Omari,
 InnBucks, ZimSwitch POS, ZIPIT, Wallet, or Visa/Mastercard (MPGS). Orders are
 confirmed from a **signed webhook** and re-verified against the status API
